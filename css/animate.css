@@ -2,27 +2,31 @@
 	http://www.w3schools.com/css/css3_transitions.asp
 	Transform applies transformation to an element*/
 #rotate {
-	-webkit-animation: mymove 10s infinite;
+	animation: mymove 10s infinite;
 }
 /*Webkit applies to Chrome, Safari, Opera...
 	-ms- applies to IE9
 	webkit > takes web prefix specific to that browser and set up for a property to be used  
 	http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm
 	name, how fast or slow, */
-@-webkit-keyframes mymove {
-	50% {-webkit-transform:rotate(360deg);}
+@keyframes mymove {
+	50% {transform:rotate(360deg);}
 }
 
 /*Specify skew by x or y axis*/
 #skew {
-	-webkit-transform: skewX(-10deg);
+	transform: skewX(-10deg);
 }
 
 #all {
-
+	transform: scale(3, 6) rotate(90deg) skewX(12deg);
 }
 
 
 #animate {
-	
+	animation: dab 3s infinite;
+}
+
+@keyframes dab {
+	20% {transform:	rotate(180deg);}
 }
